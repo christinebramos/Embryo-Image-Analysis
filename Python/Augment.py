@@ -64,12 +64,12 @@ for file_name in glob.iglob(os.path.join(org_dir, "*" + ext)):
         print("ROTATED: {:s} by {:3d} degrees to {:s}".format(file_nameNew, degrees, save_dirRotate)) 
 
     #Split image into 4 equal pieces
-    pieces, = image_slicer.slice(file_name, 4, save=False)
+    pieces = image_slicer.slice(file_name, 4, save=False) [0]
     
     #Save images to specified folder
     save_dirSplice = '/Users/christinembramos/Desktop/Embryo Image Analysis/Augmented/Spliced'
     file_pathSplice = os.path.join(save_dirSplice, file_nameNew)
-    pieces.save(save_dirSplice)
+    pieces.save(file_pathSplice)
         
     print("Split {:s} into 4 pieces in {:s}".format(file_nameNew, save_dirSplice))
     
