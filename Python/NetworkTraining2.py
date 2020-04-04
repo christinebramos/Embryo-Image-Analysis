@@ -7,4 +7,4 @@ import torch.nn.functional as functional
 class Net(nn.Module):   # Define neural network
     def __init__(self):
         super(Net, self).__init__()
-        
+        # Incomplete
